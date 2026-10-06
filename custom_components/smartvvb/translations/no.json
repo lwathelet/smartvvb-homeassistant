@@ -1,0 +1,116 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Koble til SmartVVB",
+        "data": {
+          "username": "Brukernavn",
+          "password": "Passord"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Koble til SmartVVB på nytt",
+        "description": "Skriv inn passordet for {username} på nytt for å gjenopprette tilkoblingen.",
+        "data": {
+          "password": "Passord"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Feil brukernavn eller passord",
+      "cannot_connect": "Kunne ikke koble til SmartVVB"
+    },
+    "abort": {
+      "already_configured": "Denne SmartVVB-kontoen er allerede konfigurert",
+      "reauth_successful": "Ny autentisering var vellykket"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "water_temperature": {
+        "name": "Vanntemperatur"
+      },
+      "power": {
+        "name": "Effekt"
+      },
+      "day_energy": {
+        "name": "Energi i dag"
+      },
+      "signal_strength": {
+        "name": "Signalstyrke"
+      },
+      "day_cost": {
+        "name": "Kostnad i dag"
+      },
+      "water_available": {
+        "name": "Tilgjengelig varmtvann"
+      },
+      "water_used_today": {
+        "name": "Brukt i dag"
+      }
+    },
+    "select": {
+      "mode": {
+        "name": "Modus",
+        "state": {
+          "off": "Av",
+          "away": "Borte",
+          "economy": "Økonomi",
+          "standard": "Standard",
+          "comfort": "Komfort",
+          "auto": "Auto",
+          "always_on": "Alltid på"
+        }
+      }
+    },
+    "button": {
+      "force_on": {
+        "name": "Tving på"
+      },
+      "force_off": {
+        "name": "Tving av"
+      }
+    },
+    "number": {
+      "max_energy_per_hour": {
+        "name": "Maks energi per time"
+      }
+    },
+    "binary_sensor": {
+      "heating": {
+        "name": "Varmer"
+      },
+      "water_safety": {
+        "name": "Vannsikkerhet"
+      }
+    },
+    "water_heater": {
+      "water_heater": {
+        "state": {
+          "off": "Av",
+          "economy": "Økonomi",
+          "standard": "Standard",
+          "comfort": "Komfort",
+          "auto": "Auto",
+          "always_on": "Alltid på"
+        }
+      }
+    }
+  },
+  "services": {
+    "set_max_energy_schedule": {
+      "name": "Sett maks energiplan",
+      "description": "Sett maks effekt (W) varmtvannsberederen kan bruke for hver av døgnets 24 timer. Bruk 0 for å blokkere en time.",
+      "fields": {
+        "device_id": {
+          "name": "Enhet",
+          "description": "SmartVVB-varmtvannsberederen."
+        },
+        "hours": {
+          "name": "Timer",
+          "description": "Liste med 24 verdier i watt, fra 00:00-01:00."
+        }
+      }
+    }
+  }
+}

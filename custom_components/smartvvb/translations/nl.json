@@ -1,0 +1,116 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Verbinden met SmartVVB",
+        "data": {
+          "username": "Gebruikersnaam",
+          "password": "Wachtwoord"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Opnieuw verbinden met SmartVVB",
+        "description": "Voer het wachtwoord voor {username} opnieuw in om de verbinding te herstellen.",
+        "data": {
+          "password": "Wachtwoord"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Ongeldige gebruikersnaam of wachtwoord",
+      "cannot_connect": "Kon geen verbinding maken met SmartVVB"
+    },
+    "abort": {
+      "already_configured": "Dit SmartVVB-account is al geconfigureerd",
+      "reauth_successful": "Opnieuw verifiëren is gelukt"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "water_temperature": {
+        "name": "Watertemperatuur"
+      },
+      "power": {
+        "name": "Vermogen"
+      },
+      "day_energy": {
+        "name": "Energie vandaag"
+      },
+      "signal_strength": {
+        "name": "Signaalsterkte"
+      },
+      "day_cost": {
+        "name": "Kosten vandaag"
+      },
+      "water_available": {
+        "name": "Beschikbaar warm water"
+      },
+      "water_used_today": {
+        "name": "Water gebruikt vandaag"
+      }
+    },
+    "select": {
+      "mode": {
+        "name": "Modus",
+        "state": {
+          "off": "Uit",
+          "away": "Afwezig",
+          "economy": "Eco",
+          "standard": "Standaard",
+          "comfort": "Comfort",
+          "auto": "Auto",
+          "always_on": "Altijd aan"
+        }
+      }
+    },
+    "button": {
+      "force_on": {
+        "name": "Forceer aan"
+      },
+      "force_off": {
+        "name": "Forceer uit"
+      }
+    },
+    "number": {
+      "max_energy_per_hour": {
+        "name": "Max. energie per uur"
+      }
+    },
+    "binary_sensor": {
+      "heating": {
+        "name": "Verwarmen"
+      },
+      "water_safety": {
+        "name": "Waterveiligheid"
+      }
+    },
+    "water_heater": {
+      "water_heater": {
+        "state": {
+          "off": "Uit",
+          "economy": "Eco",
+          "standard": "Standaard",
+          "comfort": "Comfort",
+          "auto": "Auto",
+          "always_on": "Altijd aan"
+        }
+      }
+    }
+  },
+  "services": {
+    "set_max_energy_schedule": {
+      "name": "Max. energieschema instellen",
+      "description": "Stel het maximale vermogen (W) in voor elk van de 24 uren. Gebruik 0 om een uur te blokkeren.",
+      "fields": {
+        "device_id": {
+          "name": "Apparaat",
+          "description": "De SmartVVB-boiler."
+        },
+        "hours": {
+          "name": "Uren",
+          "description": "Lijst van 24 waarden in watt, beginnend bij 00:00-01:00."
+        }
+      }
+    }
+  }
+}

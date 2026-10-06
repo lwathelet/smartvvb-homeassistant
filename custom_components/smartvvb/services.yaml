@@ -1,0 +1,12 @@
+set_max_energy_schedule:
+  fields:
+    device_id:
+      required: true
+      selector:
+        device:
+          integration: smartvvb
+    hours:
+      required: true
+      example: "[2000, 2000, 2000, 2000, 2000, 2000, 0, 0, 0, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 0, 0, 0, 0, 2000, 2000, 2000, 2000]"
+      selector:
+        object:

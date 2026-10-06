@@ -1,0 +1,116 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connexion à SmartVVB",
+        "data": {
+          "username": "Nom d'utilisateur",
+          "password": "Mot de passe"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Reconnexion à SmartVVB",
+        "description": "Ressaisissez le mot de passe de {username} pour rétablir la connexion.",
+        "data": {
+          "password": "Mot de passe"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Nom d'utilisateur ou mot de passe invalide",
+      "cannot_connect": "Échec de la connexion à SmartVVB"
+    },
+    "abort": {
+      "already_configured": "Ce compte SmartVVB est déjà configuré",
+      "reauth_successful": "La ré-authentification a réussi"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "water_temperature": {
+        "name": "Température de l'eau"
+      },
+      "power": {
+        "name": "Puissance"
+      },
+      "day_energy": {
+        "name": "Énergie aujourd'hui"
+      },
+      "signal_strength": {
+        "name": "Force du signal"
+      },
+      "day_cost": {
+        "name": "Coût aujourd'hui"
+      },
+      "water_available": {
+        "name": "Eau chaude disponible"
+      },
+      "water_used_today": {
+        "name": "Eau utilisée aujourd'hui"
+      }
+    },
+    "select": {
+      "mode": {
+        "name": "Mode",
+        "state": {
+          "off": "Arrêt",
+          "away": "Absent",
+          "economy": "Économie",
+          "standard": "Standard",
+          "comfort": "Confort",
+          "auto": "Auto",
+          "always_on": "Toujours en marche"
+        }
+      }
+    },
+    "button": {
+      "force_on": {
+        "name": "Forcer la marche"
+      },
+      "force_off": {
+        "name": "Forcer l'arrêt"
+      }
+    },
+    "number": {
+      "max_energy_per_hour": {
+        "name": "Énergie max par heure"
+      }
+    },
+    "binary_sensor": {
+      "heating": {
+        "name": "Chauffe en cours"
+      },
+      "water_safety": {
+        "name": "Sécurité de l'eau"
+      }
+    },
+    "water_heater": {
+      "water_heater": {
+        "state": {
+          "off": "Arrêt",
+          "economy": "Économie",
+          "standard": "Standard",
+          "comfort": "Confort",
+          "auto": "Auto",
+          "always_on": "Toujours en marche"
+        }
+      }
+    }
+  },
+  "services": {
+    "set_max_energy_schedule": {
+      "name": "Définir le planning d'énergie maximale",
+      "description": "Définit la puissance maximale (W) autorisée pour chacune des 24 heures. Utilisez 0 pour bloquer une heure.",
+      "fields": {
+        "device_id": {
+          "name": "Appareil",
+          "description": "Le chauffe-eau SmartVVB."
+        },
+        "hours": {
+          "name": "Heures",
+          "description": "Liste de 24 valeurs en watts, à partir de 00:00-01:00."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "domain": "smartvvb",
+  "name": "SmartVVB",
+  "codeowners": ["@lwathelet"],
+  "config_flow": true,
+  "documentation": "https://github.com/lwathelet/smartvvb-homeassistant",
+  "integration_type": "hub",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/lwathelet/smartvvb-homeassistant/issues",
+  "requirements": [],
+  "version": "0.4.0"
+}
